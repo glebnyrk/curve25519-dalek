@@ -75,7 +75,7 @@ impl Zeroize for PublicKey {
 /// are no serialization methods defined.  This means that [`EphemeralSecret`]s can only be
 /// generated from fresh randomness where the compiler statically checks that the resulting
 /// secret is used at most once.
-pub struct EphemeralSecret(pub(crate) [u8; 32]);
+pub struct EphemeralSecret(pub [u8; 32]);
 
 impl EphemeralSecret {
     /// Perform a Diffie-Hellman key agreement between `self` and
